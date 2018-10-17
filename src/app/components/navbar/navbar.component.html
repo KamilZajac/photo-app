@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrap">
+    <div class="links">
+      <a [class.active]="param === 'dogs'" [routerLink]="['/photos']" [queryParams]="{category: 'dogs'}">Dogs</a>
+      <a [class.active]="param === 'cats'" [routerLink]="['/photos']" [queryParams]="{category: 'cats'}">Cats</a>
+    </div>
+
+    <div class="search">
+      <form (submit)="onSearchClick(query)">
+        <input type="text" [(ngModel)]="query" placeholder="type in category" name="category">
+        <button [ngClass]="{'disabled' : query.length === 0}" type="submit">search</button>
+      </form>
+    </div>
+  </div>
+</nav>

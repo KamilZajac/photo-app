@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<div class="photo-list" #photosWrapper (scroll)="onPhotosScroll($event)">
+  <div class="photos" *ngIf="photos && !loading">
+    <app-single-photo
+      *ngFor="let photo of photos | photoPipe"
+      [photo]="photo"
+      (click)="goToPhoto(photo)"
+      (authorClicked)="searchByAuthor($event)"></app-single-photo>
+  </div>
+</div>
+<app-loader *ngIf="photos.length === 0 && loading"></app-loader>

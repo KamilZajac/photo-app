@@ -1,0 +1,23 @@
+.photo-list {
+  background: #f4f4f4;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 2em;
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    max-width: 1366px;
+    app-single-photo {
+      width: 300px;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .photo-list .photos {
+    justify-content: center;
+  }
+
+}

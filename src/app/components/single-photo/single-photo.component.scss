@@ -1,0 +1,60 @@
+.single-photo {
+  max-width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 2em;
+  height: 280px;
+  border-radius: 5px;
+  position: relative;
+  transition: .3s;
+  background: #fff;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
+    .mask{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+  .thumbnail {
+    height: 200px;
+  }
+  .mask{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 80px);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: .5s ease;
+    background: rgba(163, 213, 255, 0.31);
+    border-radius: 5px 5px 0 0 ;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    p{
+      color: #fff;
+    }
+  }
+  .desc {
+    height: 80px;
+    padding: .5em 0;
+    p {
+      white-space: nowrap;
+      color: #333;
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.7em;
+      transition: .3s;
+      &.author:hover{
+        cursor: pointer;
+        color: #0074D9
+      }
+    }
+  }
+}

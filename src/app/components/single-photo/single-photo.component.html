@@ -1,0 +1,12 @@
+<div class="single-photo">
+  <div class="thumbnail" [ngStyle]="{'background': 'url(' + photo.url_n + ') center center / contain no-repeat'}"></div>
+  <div class="desc">
+    <p *ngIf="photo.title"><strong>Title: </strong>{{photo.title}}</p>
+    <p (click)="onAuthorClicked(photo.owner)" class="author"><strong>Author: </strong>{{photo.ownername}}</p>
+    <p><strong>Date: </strong>{{photo.datetaken | date}}</p>
+  </div>
+
+  <div class="mask">
+    <p>Show more</p>
+  </div>
+</div>

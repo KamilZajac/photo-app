@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<div class="photo-details" *ngIf="photo && !loading" >
+  <div class="image-container">
+    <img src="{{photo.url_o ? photo.url_o : photo.url_n}}" alt="{{photo.title._content}}">
+  </div>
+  <div class="image-info">
+    <p *ngIf="photo.title._content"><strong>Title: </strong>{{photo.title._content}}</p>
+    <p *ngIf="photo.description._content"><strong>Description: </strong>{{photo.description._content}}</p>
+    <p class="author" (click)="searchByAuthor(photo.owner.nsid)"><strong>Author: </strong>{{photo.ownername}}</p>
+    <p><strong>Date: </strong>{{photo.datetaken | date}}</p>
+    <p><strong>Views: </strong>{{photo.views}}</p>
+  </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>

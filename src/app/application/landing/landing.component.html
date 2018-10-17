@@ -1,0 +1,22 @@
+<div class="landing">
+<div class="modal">
+  <h1>Hi!</h1>
+
+  <p>Choose category</p>
+
+  <div class="category" (click)="onCategoryChoose('dogs')">
+    <h2>Dogs</h2>
+  </div>
+
+  <div class="category" (click)="onCategoryChoose('cats')">
+    <h2>Cats</h2>
+  </div>
+
+  <p>or type in type You own</p>
+  <form (submit)="onCategoryChoose(query)">
+  <input type="text" [(ngModel)]="query" placeholder="type in category" name="category">
+  <button [ngClass]="{'disabled' : query.length === 0}" type="submit"> Go!</button>
+  </form>
+
+</div>
+</div>

@@ -1,0 +1,27 @@
+.photo-details{
+  width: 80%;
+  margin: 2em auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+
+  .image-container{
+    text-align: center;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .image-info {
+    padding: 1em;
+    p {
+      line-height: 2em;
+      &.author:hover{
+        cursor: pointer;
+        color: #0074D9
+      }
+    }
+  }
+
+}
+
